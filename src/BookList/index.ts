@@ -37,8 +37,10 @@ function searchBook(title?: string): void {
         return;
     }
 
-    console.log(`Search result for "${title}":`);
+    console.log(`Search Results for "${title}":`);
     results.forEach((b) => {
         console.log(`- ${b.title} by ${b.author} (${b.year})`);
     });
 }
+
+export { addBook, listBooks, searchBook };
