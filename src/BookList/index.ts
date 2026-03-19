@@ -22,3 +22,11 @@ function listBooks(): void {
         console.log(`- ${b.title} by ${b.author} (${b.year})`);
     });
 }
+
+// Function to search for a book by title
+function searchBook(title?: string): void {
+    if (!title) {
+        console.log("Please provide a title to search.");
+        return;
+    }
+}
