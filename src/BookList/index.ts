@@ -29,4 +29,16 @@ function searchBook(title?: string): void {
         console.log("Please provide a title to search.");
         return;
     }
+
+    const results = books.filter((b) => b.title.includes(title));
+
+    if (results.length === 0) {
+        console.log(`No books found with title containing "${title}".`);
+        return;
+    }
+
+    console.log(`Search result for "${title}":`);
+    results.forEach((b) => {
+        console.log(`- ${b.title} by ${b.author} (${b.year})`);
+    });
 }
