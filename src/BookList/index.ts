@@ -14,3 +14,11 @@ function addBook(title: string, author: string, year: number): void {
     books.push(newBook);
     console.log(`Book added: "${title}" by ${author} (${year})`);
 }
+
+// Function to list all books
+function listBooks(): void {
+    console.log("All Books:");
+    books.forEach((b) => {
+        console.log(`- ${b.title} by ${b.author} (${b.year})`);
+    });
+}
